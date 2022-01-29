@@ -1,8 +1,8 @@
-# Android - WindowInsetsWidget
+# Android - InsetsWidget
 
 [![Platform](https://img.shields.io/badge/platform-Android-brightgreen)](https://developer.android.com)
-[![License](https://img.shields.io/github/license/TakWolf/Android-WindowInsetsWidget)](https://www.apache.org/licenses/LICENSE-2.0)
-[![JitPack](https://jitpack.io/v/TakWolf/Android-WindowInsetsWidget.svg)](https://jitpack.io/#TakWolf/Android-WindowInsetsWidget)
+[![License](https://img.shields.io/github/license/TakWolf/Android-InsetsWidget)](https://www.apache.org/licenses/LICENSE-2.0)
+[![JitPack](https://jitpack.io/v/TakWolf/Android-InsetsWidget.svg)](https://jitpack.io/#TakWolf/Android-InsetsWidget)
 
 ## License
 
