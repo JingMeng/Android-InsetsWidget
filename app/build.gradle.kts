@@ -7,7 +7,7 @@ android {
     compileSdk = 31
 
     defaultConfig {
-        applicationId = "com.takwolf.android.demo.windowinsetswidget"
+        applicationId = "com.takwolf.android.demo.insetswidget"
         minSdk = 21
         targetSdk = 31
         versionCode = 1
@@ -29,9 +29,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation(project(":insetswidget"))
 }

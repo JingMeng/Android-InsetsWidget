@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android-WindowInsetsWidget"
+rootProject.name = "Android-InsetsWidget"
 
-include(":app", ":windowinsetswidget")
+include(":app", ":insetswidget")

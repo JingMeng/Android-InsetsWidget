@@ -1,4 +1,4 @@
-package com.takwolf.android.demo.windowinsetswidget
+package com.takwolf.android.demo.insetswidget
 
 import androidx.appcompat.app.AppCompatActivity
 

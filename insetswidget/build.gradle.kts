@@ -23,7 +23,9 @@ android {
     }
 }
 
-dependencies {}
+dependencies {
+    compileOnly("androidx.core:core-ktx:1.7.0")
+}
 
 tasks {
     register("sourcesJar", Jar::class) {
@@ -36,8 +38,8 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                groupId = "com.takwolf.android.windowinsetswidget"
-                artifactId = "windowinsetswidget"
+                groupId = "com.takwolf.android.insetswidget"
+                artifactId = "insetswidget"
                 version = "0.0.1"
 
                 from(components["release"])
