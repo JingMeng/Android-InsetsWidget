@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="InsetsView">
+    </declare-styleable>
+
+    <declare-styleable name="InsetsFrameLayout">
+    </declare-styleable>
+
+    <declare-styleable name="InsetsLinearLayout">
+    </declare-styleable>
+    
+</resources>
