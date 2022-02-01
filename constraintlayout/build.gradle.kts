@@ -26,7 +26,7 @@ android {
 dependencies {
     compileOnly("androidx.core:core-ktx:1.7.0")
     compileOnly("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation(project(":insetswidget"))
+    api(project(":insetswidget"))
 }
 
 tasks {

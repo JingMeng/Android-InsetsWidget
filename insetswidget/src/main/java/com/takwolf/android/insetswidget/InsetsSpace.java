@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 
-public class InsetsSpace extends InsetsView {
+public final class InsetsSpace extends InsetsView {
     public InsetsSpace(@NonNull Context context) {
         super(context);
         init();
