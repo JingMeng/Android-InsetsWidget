@@ -29,11 +29,27 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_demo"
+                android:id="@+id/btn_demo_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Demo"
+                android:text="@string/demo_1"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_demo_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/demo_2"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_demo_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/demo_3"
                 android:textAllCaps="false" />
 
         </LinearLayout>
