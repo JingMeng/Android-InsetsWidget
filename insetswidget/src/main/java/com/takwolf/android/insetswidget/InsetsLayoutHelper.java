@@ -44,7 +44,7 @@ public class InsetsLayoutHelper {
 
     public InsetsLayoutHelper(@NonNull ViewGroup viewGroup) {
         this.viewGroup = viewGroup;
-        viewGroup.setWillNotDraw(false);
+        viewGroup.setWillNotDraw(true);
         ViewCompat.setOnApplyWindowInsetsListener(viewGroup, (v, windowInsets) -> {
             if (!insetsSmoothResize) {
                 updateLayoutPadding(windowInsets);
@@ -117,42 +117,44 @@ public class InsetsLayoutHelper {
                     insetsPaddingRight ? insets.right : 0,
                     insetsPaddingBottom ? insets.bottom : 0
             );
+            boolean shouldDraw = false;
+            if (insets.top > 0 && insetsColorTop != Color.TRANSPARENT) {
+                shouldDraw = true;
+            }
+            if (insets.bottom > 0 && insetsColorBottom != Color.TRANSPARENT) {
+                shouldDraw = true;
+            }
+            if (insets.left > 0 && insetsColorLeft != Color.TRANSPARENT) {
+                shouldDraw = true;
+            }
+            if (insets.right > 0 && insetsColorRight != Color.TRANSPARENT) {
+                shouldDraw = true;
+            }
+            viewGroup.setWillNotDraw(!shouldDraw);
             viewGroup.invalidate();
         }
     }
 
     public void onDrawForeground(@NonNull Canvas canvas) {
+        int x = viewGroup.getScrollX();
+        int y = viewGroup.getScrollY();
+        int width = viewGroup.getWidth();
+        int height = viewGroup.getHeight();
         if (insets.top > 0 && insetsColorTop != Color.TRANSPARENT) {
             paint.setColor(insetsColorTop);
-            int left = insets.left;
-            int right = canvas.getWidth() - insets.right;
-            int top = 0;
-            int bottom = insets.top;
-            canvas.drawRect(left, top, right, bottom, paint);
+            canvas.drawRect(x + insets.left, y, x + width - insets.right, y + insets.top, paint);
         }
         if (insets.bottom > 0 && insetsColorBottom != Color.TRANSPARENT) {
             paint.setColor(insetsColorBottom);
-            int left = insets.left;
-            int right = canvas.getWidth() - insets.right;
-            int top = canvas.getHeight() - insets.bottom;
-            int bottom = canvas.getHeight();
-            canvas.drawRect(left, top, right, bottom, paint);
+            canvas.drawRect(x + insets.left, y + height - insets.bottom, x + width - insets.right, y + height, paint);
         }
         if (insets.left > 0 && insetsColorLeft != Color.TRANSPARENT) {
             paint.setColor(insetsColorLeft);
-            int left = 0;
-            int right = insets.left;
-            int top = 0;
-            int bottom = canvas.getHeight();
-            canvas.drawRect(left, top, right, bottom, paint);
+            canvas.drawRect(x, y, x + insets.left, y + height, paint);
         }
         if (insets.right > 0 && insetsColorRight != Color.TRANSPARENT) {
             paint.setColor(insetsColorRight);
-            int left = canvas.getWidth() - insets.right;
-            int right = canvas.getWidth();
-            int top = 0;
-            int bottom = canvas.getHeight();
-            canvas.drawRect(left, top, right, bottom, paint);
+            canvas.drawRect(x + width - insets.right, y, x + width, y + height, paint);
         }
     }
 
