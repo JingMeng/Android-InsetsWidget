@@ -135,7 +135,7 @@ public class InsetsLayoutHelper {
         }
     }
 
-    public void onDrawForeground(@NonNull Canvas canvas) {
+    public void dispatchDraw(@NonNull Canvas canvas) {
         int x = viewGroup.getScrollX();
         int y = viewGroup.getScrollY();
         int width = viewGroup.getWidth();

@@ -60,9 +60,9 @@ public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLa
     }
 
     @Override
-    public void onDrawForeground(Canvas canvas) {
-        super.onDrawForeground(canvas);
-        helper.onDrawForeground(canvas);
+    protected void dispatchDraw(@NonNull Canvas canvas) {
+        super.dispatchDraw(canvas);
+        helper.dispatchDraw(canvas);
     }
 
     @NonNull

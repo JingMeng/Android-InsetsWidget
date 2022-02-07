@@ -57,9 +57,9 @@ public class InsetsFrameLayout extends FrameLayout implements InsetsLayout {
     }
 
     @Override
-    public void onDrawForeground(Canvas canvas) {
-        super.onDrawForeground(canvas);
-        helper.onDrawForeground(canvas);
+    protected void dispatchDraw(@NonNull Canvas canvas) {
+        super.dispatchDraw(canvas);
+        helper.dispatchDraw(canvas);
     }
 
     @NonNull
