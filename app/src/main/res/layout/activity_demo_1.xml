@@ -8,10 +8,10 @@
     app:isw_insetsType="statusBars|navigationBars"
     app:isw_insetsPaddingTop="false"
     app:isw_insetsPaddingBottom="false"
-    app:isw_insetsColorTop="@color/translucent_black"
-    app:isw_insetsColorBottom="@color/translucent_black"
-    app:isw_insetsColorLeft="@color/translucent_black"
-    app:isw_insetsColorRight="@color/translucent_black">
+    app:isw_insetsColorTop="@color/translucent_system_bars"
+    app:isw_insetsColorBottom="@color/translucent_system_bars"
+    app:isw_insetsColorLeft="@color/translucent_system_bars"
+    app:isw_insetsColorRight="@color/translucent_system_bars">
 
     <com.takwolf.android.insetswidget.InsetsSpace
         android:layout_width="match_parent"

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:isw_insetsType="statusBars|navigationBars|ime"
-    app:isw_insetsColorTop="@color/translucent_black"
-    app:isw_insetsColorBottom="@color/translucent_black"
-    app:isw_insetsColorLeft="@color/translucent_black"
-    app:isw_insetsColorRight="@color/translucent_black">
+    app:isw_insetsColorTop="@color/translucent_system_bars"
+    app:isw_insetsColorBottom="@color/translucent_system_bars"
+    app:isw_insetsColorLeft="@color/translucent_system_bars"
+    app:isw_insetsColorRight="@color/translucent_system_bars">
 
     <EditText
         android:layout_width="match_parent"
