@@ -9,7 +9,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         binding.btnDemo1.setOnClickListener {
             startActivity(Intent(this, Demo1Activity::class.java))
@@ -22,5 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnDemo3.setOnClickListener {
             startActivity(Intent(this, Demo3Activity::class.java))
         }
+
+        setContentView(binding.root)
     }
 }
