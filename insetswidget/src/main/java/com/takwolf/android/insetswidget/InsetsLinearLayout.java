@@ -50,18 +50,6 @@ public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
         a.recycle();
     }
 
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        helper.onAttachedToWindow();
-    }
-
-    @Override
-    protected void dispatchDraw(@NonNull Canvas canvas) {
-        super.dispatchDraw(canvas);
-        helper.dispatchDraw(canvas);
-    }
-
     @NonNull
     @Override
     public Insets getInsets() {
@@ -166,5 +154,17 @@ public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
     @Override
     public void setInsetsColorBottom(int insetsColorBottom) {
         helper.setInsetsColorBottom(insetsColorBottom);
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        helper.onAttachedToWindow();
+    }
+
+    @Override
+    protected void dispatchDraw(@NonNull Canvas canvas) {
+        super.dispatchDraw(canvas);
+        helper.onDraw(canvas);
     }
 }

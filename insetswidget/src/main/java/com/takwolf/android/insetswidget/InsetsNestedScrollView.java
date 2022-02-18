@@ -44,18 +44,6 @@ public class InsetsNestedScrollView extends NestedScrollView implements InsetsLa
         a.recycle();
     }
 
-    @Override
-    public void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        helper.onAttachedToWindow();
-    }
-
-    @Override
-    protected void dispatchDraw(@NonNull Canvas canvas) {
-        super.dispatchDraw(canvas);
-        helper.dispatchDraw(canvas);
-    }
-
     @NonNull
     @Override
     public Insets getInsets() {
@@ -160,5 +148,17 @@ public class InsetsNestedScrollView extends NestedScrollView implements InsetsLa
     @Override
     public void setInsetsColorBottom(int insetsColorBottom) {
         helper.setInsetsColorBottom(insetsColorBottom);
+    }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        helper.onAttachedToWindow();
+    }
+
+    @Override
+    protected void dispatchDraw(@NonNull Canvas canvas) {
+        super.dispatchDraw(canvas);
+        helper.onDraw(canvas);
     }
 }

@@ -41,17 +41,6 @@ public class InsetsView extends View implements InsetsWidget {
         a.recycle();
     }
 
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        helper.onAttachedToWindow();
-    }
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension(helper.getMeasuredWidth(widthMeasureSpec), helper.getMeasuredHeight(heightMeasureSpec));
-    }
-
     @NonNull
     @Override
     public Insets getInsets() {
@@ -76,5 +65,16 @@ public class InsetsView extends View implements InsetsWidget {
     @Override
     public void setInsetsSmoothResize(boolean insetsSmoothResize) {
         helper.setInsetsSmoothResize(insetsSmoothResize);
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        helper.onAttachedToWindow();
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        setMeasuredDimension(helper.getMeasuredWidth(widthMeasureSpec), helper.getMeasuredHeight(heightMeasureSpec));
     }
 }
