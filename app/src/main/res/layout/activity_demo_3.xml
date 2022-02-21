@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="1000dp"
             android:layout_margin="16dp"
-            android:background="@color/app_primary" />
+            android:background="?colorPrimary" />
 
         <com.takwolf.android.insetswidget.InsetsSpace
             android:layout_width="match_parent"
