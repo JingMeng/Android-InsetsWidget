@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 32
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
+        targetSdk = 32
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -24,8 +24,8 @@ android {
 }
 
 dependencies {
-    compileOnly("androidx.core:core-ktx:1.7.0")
-    compileOnly("androidx.constraintlayout:constraintlayout:2.1.3")
+    compileOnly("androidx.core:core-ktx:1.8.0")
+    compileOnly("androidx.constraintlayout:constraintlayout:2.1.4")
     api(project(":insetswidget"))
 }
 
