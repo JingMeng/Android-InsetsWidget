@@ -1,6 +1,7 @@
 # Android - InsetsWidget
 
 [![Platform](https://img.shields.io/badge/platform-Android-brightgreen)](https://developer.android.com)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen)](https://android-arsenal.com/api?level=21)
 [![License](https://img.shields.io/github/license/TakWolf/Android-InsetsWidget)](https://www.apache.org/licenses/LICENSE-2.0)
 [![JitPack](https://jitpack.io/v/TakWolf/Android-InsetsWidget.svg)](https://jitpack.io/#TakWolf/Android-InsetsWidget)
 
@@ -20,10 +21,10 @@ repositories {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("com.github.TakWolf.Android-InsetsWidget:insetswidget:0.0.1")
     // 可选。为 `ConstraintLayout` 添加支持。
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.github.TakWolf.Android-InsetsWidget:constraintlayout:0.0.1")
 }
 ```

@@ -6,11 +6,10 @@ plugins {
 
 android {
     namespace = "com.takwolf.android.insetswidget"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 33
 
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -26,7 +25,7 @@ android {
 }
 
 dependencies {
-    compileOnly("androidx.core:core-ktx:1.8.0")
+    compileOnly("androidx.core:core-ktx:1.12.0")
 }
 
 tasks {
